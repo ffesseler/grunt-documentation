@@ -20,7 +20,8 @@ module.exports = function(grunt) {
             shallow: false,
             github: false,
             access: ['public', 'protected', 'undefined'],
-            order: []
+            order: [],
+            sortOrder: 'source'
         });
 
         var formatter = formats[options.format];
@@ -35,7 +36,8 @@ module.exports = function(grunt) {
             toc: options.toc || options.order,
             theme: options.theme,
             name: options.name,
-            version: options.version
+            version: options.version,
+            sortOrder: options.sortOrder
         };
 
         var done = this.async(),
